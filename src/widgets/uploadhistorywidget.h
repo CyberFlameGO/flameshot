@@ -1,5 +1,5 @@
-#ifndef HISTORYWIDGET_H
-#define HISTORYWIDGET_H
+#ifndef UPLOADHISTORYWIDGET_H
+#define UPLOADHISTORYWIDGET_H
 
 #include <QDialog>
 
@@ -9,12 +9,12 @@ class QVBoxLayout;
 class NotificationWidget;
 class ImgUploader;
 
-class HistoryWidget : public QDialog
+class UploadHistoryWidget : public QDialog
 {
     Q_OBJECT
 public:
-    explicit HistoryWidget(QWidget* parent = nullptr);
-    ~HistoryWidget();
+    explicit UploadHistoryWidget(QWidget* parent = nullptr);
+    ~UploadHistoryWidget();
 
     void loadHistory();
 
@@ -34,4 +34,4 @@ private:
     NotificationWidget* m_notification;
 };
 
-#endif // HISTORYWIDGET_H
+#endif // UPLOADHISTORYWIDGET_H

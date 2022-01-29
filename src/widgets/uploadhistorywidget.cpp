@@ -1,4 +1,4 @@
-#include "historywidget.h"
+#include "uploadhistorywidget.h"
 #include "src/core/flameshotdaemon.h"
 #include "src/tools/imgupload/imguploadermanager.h"
 #include "src/utils/confighandler.h"
@@ -19,7 +19,7 @@
 #include <QUrl>
 #include <QVBoxLayout>
 
-HistoryWidget::HistoryWidget(QWidget* parent)
+UploadHistoryWidget::UploadHistoryWidget(QWidget* parent)
   : QDialog(parent)
 {
     setWindowIcon(QIcon(GlobalValues::iconPath()));
@@ -46,12 +46,12 @@ HistoryWidget::HistoryWidget(QWidget* parent)
     layout->addWidget(scrollArea);
 }
 
-HistoryWidget::~HistoryWidget()
+UploadHistoryWidget::~UploadHistoryWidget()
 {
     delete m_notification;
 }
 
-void HistoryWidget::clearHistoryLayout(QLayout* layout)
+void UploadHistoryWidget::clearHistoryLayout(QLayout* layout)
 {
     QLayoutItem* child;
     while (layout->count() != 0) {
@@ -66,7 +66,7 @@ void HistoryWidget::clearHistoryLayout(QLayout* layout)
     }
 }
 
-void HistoryWidget::loadHistory()
+void UploadHistoryWidget::loadHistory()
 {
     // clear old history if exists
     clearHistoryLayout(m_pVBox);
@@ -85,7 +85,7 @@ void HistoryWidget::loadHistory()
     }
 }
 
-void HistoryWidget::setEmptyMessage()
+void UploadHistoryWidget::setEmptyMessage()
 {
     QPushButton* buttonEmpty = new QPushButton;
     buttonEmpty->setText(tr("Screenshots history is empty"));
@@ -94,7 +94,7 @@ void HistoryWidget::setEmptyMessage()
     m_pVBox->addWidget(buttonEmpty);
 }
 
-void HistoryWidget::addLine(const QString& path, const QString& fileName)
+void UploadHistoryWidget::addLine(const QString& path, const QString& fileName)
 {
     QHBoxLayout* phbl = new QHBoxLayout();
     QString fullFileName = path + fileName;
@@ -197,7 +197,7 @@ void HistoryWidget::addLine(const QString& path, const QString& fileName)
     m_pVBox->addLayout(phbl);
 }
 
-void HistoryWidget::removeItem(QLayout* pl,
+void UploadHistoryWidget::removeItem(QLayout* pl,
                                const QString& fileName,
                                const QString& deleteToken)
 {
@@ -214,7 +214,7 @@ void HistoryWidget::removeItem(QLayout* pl,
      });*/
 }
 
-void HistoryWidget::removeLayoutItem(QLayout* pl)
+void UploadHistoryWidget::removeLayoutItem(QLayout* pl)
 {
     // remove current row or refresh list
     while (pl->count() > 0) {
@@ -231,7 +231,7 @@ void HistoryWidget::removeLayoutItem(QLayout* pl)
     }
 }
 
-void HistoryWidget::removeCacheFile(const QString& fullFileName)
+void UploadHistoryWidget::removeCacheFile(const QString& fullFileName)
 {
     // premove history preview
     QFile file(fullFileName);

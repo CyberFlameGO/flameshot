@@ -15,7 +15,7 @@ target_sources(
         loadspinner.h
         notificationwidget.h
         orientablepushbutton.h
-        historywidget.h
+        uploadhistorywidget.h
         updatenotificationwidget.h
         imguploaddialog.h
         capture/capturetoolobjects.h
@@ -30,7 +30,7 @@ target_sources(
         loadspinner.cpp
         notificationwidget.cpp
         orientablepushbutton.cpp
-        historywidget.cpp
+        uploadhistorywidget.cpp
         updatenotificationwidget.cpp
         imguploaddialog.cpp
         capture/capturetoolobjects.cpp
