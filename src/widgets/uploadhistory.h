@@ -3,14 +3,13 @@
 
 #include <QWidget>
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class UploadHistory;
 }
 QT_END_NAMESPACE
 
-void scaleThumbnail(QPixmap &input);
+void scaleThumbnail(QPixmap& input);
 
 class UploadHistory : public QWidget
 {
