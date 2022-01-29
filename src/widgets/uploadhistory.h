@@ -1,20 +1,31 @@
-#ifndef UPLOADHISTORYWIDGET_H
-#define UPLOADHISTORYWIDGET_H
+#ifndef UPLOADHISTORY_H
+#define UPLOADHISTORY_H
 
-#include <QDialog>
+#include <QWidget>
 
-class QString;
-class QLayout;
-class QVBoxLayout;
-class NotificationWidget;
-class ImgUploader;
+QT_BEGIN_NAMESPACE
+namespace Ui {
+class UploadHistory;
+}
+QT_END_NAMESPACE
 
-class UploadHistoryWidget : public QDialog
+class UploadHistory : public QWidget
 {
     Q_OBJECT
 public:
-    explicit UploadHistoryWidget(QWidget* parent = nullptr);
-    ~UploadHistoryWidget();
+    explicit UploadHistory(QWidget* parent = nullptr);
+    ~UploadHistory();
+private:
+    Ui::UploadHistory* ui;
+};
+
+/*
+ * class UploadHistory : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit UploadHistory(QWidget* parent = nullptr);
+    ~UploadHistory();
 
     void loadHistory();
 
@@ -34,4 +45,5 @@ private:
     NotificationWidget* m_notification;
 };
 
-#endif // UPLOADHISTORYWIDGET_H
+*/
+#endif // UPLOADHISTORY_H

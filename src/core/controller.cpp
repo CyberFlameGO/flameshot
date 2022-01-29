@@ -23,7 +23,7 @@
 #include "src/widgets/capture/capturetoolbutton.h"
 #include "src/widgets/capture/capturewidget.h"
 #include "src/widgets/capturelauncher.h"
-#include "src/widgets/uploadhistorywidget.h"
+#include "src/widgets/uploadhistory.h"
 #include "src/widgets/imguploaddialog.h"
 #include "src/widgets/infowindow.h"
 #include <QAction>
@@ -589,14 +589,14 @@ void Controller::sendTrayNotification(const QString& text,
 
 void Controller::showRecentUploads()
 {
-    static UploadHistoryWidget* historyWidget = nullptr;
+    static UploadHistory* historyWidget = nullptr;
     if (nullptr == historyWidget) {
-        historyWidget = new UploadHistoryWidget();
-        connect(historyWidget, &QObject::destroyed, this, []() {
-            historyWidget = nullptr;
-        });
+        historyWidget = new UploadHistory();
+    //    connect(historyWidget, &QObject::destroyed, this, []() {
+    //        historyWidget = nullptr;
+    //    });
     }
-    historyWidget->loadHistory();
+    //historyWidget->loadHistory();
     historyWidget->show();
 #if defined(Q_OS_MACOS)
     historyWidget->activateWindow();
