@@ -31,6 +31,11 @@
         <height>453</height>
        </rect>
       </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="historyContainer"/>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

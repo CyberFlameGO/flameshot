@@ -3,24 +3,16 @@
 
 #include <QWidget>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class UploadHistory;
 }
 QT_END_NAMESPACE
 
-class UploadHistory : public QWidget
-{
-    Q_OBJECT
-public:
-    explicit UploadHistory(QWidget* parent = nullptr);
-    ~UploadHistory();
-private:
-    Ui::UploadHistory* ui;
-};
+void scaleThumbnail(QPixmap &input);
 
-/*
- * class UploadHistory : public QWidget
+class UploadHistory : public QWidget
 {
     Q_OBJECT
 public:
@@ -31,18 +23,20 @@ public:
 
 private:
     void clearHistoryLayout(QLayout* layout);
-
-    void addLine(const QString&, const QString&);
     void setEmptyMessage();
+    void addLine(QString const&, QString const&);
+
+    Ui::UploadHistory* ui;
+};
+
+/*
+private:
+    void addLine(const QString&, const QString&);
     void removeItem(QLayout* pl,
                     const QString& s3FileName,
                     const QString& deleteToken);
     void removeLayoutItem(QLayout* pl);
     void removeCacheFile(const QString& fullFileName);
-
-private:
-    QVBoxLayout* m_pVBox;
-    NotificationWidget* m_notification;
 };
 
 */

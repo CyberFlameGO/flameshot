@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>uploadLineItem</class>
- <widget class="QWidget" name="uploadLineItem">
+ <class>UploadLineItem</class>
+ <widget class="QWidget" name="UploadLineItem">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,37 +17,59 @@
    <item row="0" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="imagePreview">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="uploadTimestamp">
        <property name="text">
-        <string>TextLabel</string>
+        <string notr="true">timestamp</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="copyUrl">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>Copy URL</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="openBrowser">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>Open In Browser</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="deleteImage">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>PushButton</string>
+        <string notr="true"/>
+       </property>
+       <property name="icon">
+        <iconset resource="../../data/graphics.qrc">
+         <normaloff>:/img/material/black/delete.svg</normaloff>:/img/material/black/delete.svg</iconset>
        </property>
       </widget>
      </item>
@@ -55,6 +77,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../data/graphics.qrc"/>
+ </resources>
  <connections/>
 </ui>

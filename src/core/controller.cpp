@@ -596,7 +596,7 @@ void Controller::showRecentUploads()
     //        historyWidget = nullptr;
     //    });
     }
-    //historyWidget->loadHistory();
+    historyWidget->loadHistory();
     historyWidget->show();
 #if defined(Q_OS_MACOS)
     historyWidget->activateWindow();

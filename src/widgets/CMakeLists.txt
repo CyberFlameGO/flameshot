@@ -8,6 +8,7 @@ target_sources(
         infowindow.ui
         capturelauncher.ui
         uploadhistory.ui
+        uploadlineitem.ui
 
         capturelauncher.h
         draggablewidgetmaker.h
@@ -17,6 +18,7 @@ target_sources(
         notificationwidget.h
         orientablepushbutton.h
         uploadhistory.h
+        uploadlineitem.h
         updatenotificationwidget.h
         imguploaddialog.h
         capture/capturetoolobjects.h
@@ -32,6 +34,7 @@ target_sources(
         notificationwidget.cpp
         orientablepushbutton.cpp
         uploadhistory.cpp
+        uploadlineitem.cpp
         updatenotificationwidget.cpp
         imguploaddialog.cpp
         capture/capturetoolobjects.cpp
